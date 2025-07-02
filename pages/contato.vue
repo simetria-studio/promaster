@@ -8,7 +8,7 @@
             Entre em <span class="text-[#0194DA]">Contato</span>
           </h1>
           <p class="text-xl md:text-2xl text-gray-600 animate-fade-in-up animation-delay-200">
-            Vamos conversar sobre como podemos ajudar seu negócio a crescer
+            Solicite orçamentos, tire suas dúvidas ou conheça nossos produtos para termoplásticos
           </p>
         </div>
       </div>
@@ -22,7 +22,7 @@
           <div class="animate-slide-in-left">
             <div class="card-promaster p-8">
               <h2 class="text-3xl font-bold text-gray-900 mb-6 font-poppins">
-                Envie sua Mensagem
+                Solicite seu Orçamento
               </h2>
               <form @submit.prevent="submitForm" class="space-y-6">
                 <!-- Nome -->
@@ -65,7 +65,7 @@
                     v-model="form.telefone"
                     type="tel"
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0194DA] focus:border-transparent outline-none transition-all"
-                    placeholder="(11) 99999-9999"
+                    placeholder="(41) 3011-0777"
                   />
                 </div>
 
@@ -95,13 +95,13 @@
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0194DA] focus:border-transparent outline-none transition-all"
                   >
                     <option value="">Selecione um assunto</option>
-                    <option value="desenvolvimento-web">Desenvolvimento Web</option>
-                    <option value="aplicacao-mobile">Aplicação Mobile</option>
-                    <option value="solucoes-nuvem">Soluções em Nuvem</option>
-                    <option value="business-intelligence">Business Intelligence</option>
-                    <option value="ciberseguranca">Cibersegurança</option>
-                    <option value="automacao">Automação de Processos</option>
-                    <option value="consultoria">Consultoria</option>
+                    <option value="pigmentos">Pigmentos</option>
+                    <option value="aditivos">Aditivos</option>
+                    <option value="resinas-reciclaveis">Resinas Recicláveis</option>
+                    <option value="identificacao-cor">Identificação de Cor</option>
+                    <option value="orcamento">Solicitar Orçamento</option>
+                    <option value="entrega">Prazo de Entrega</option>
+                    <option value="representacao">Representação Comercial</option>
                     <option value="outros">Outros</option>
                   </select>
                 </div>
@@ -117,7 +117,7 @@
                     rows="5"
                     required
                     class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0194DA] focus:border-transparent outline-none transition-all resize-none"
-                    placeholder="Conte-nos mais sobre seu projeto ou necessidade..."
+                    placeholder="Descreva suas necessidades de pigmentos, aditivos ou resinas. Informe quantidades, especificações técnicas ou outras informações relevantes..."
                   ></textarea>
                 </div>
 
@@ -128,7 +128,7 @@
                   class="w-full btn-promaster text-lg py-4 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                 >
                   <Icon v-if="isSubmitting" name="mdi:loading" class="animate-spin mr-2" />
-                  {{ isSubmitting ? 'Enviando...' : 'Enviar Mensagem' }}
+                  {{ isSubmitting ? 'Enviando...' : 'Solicitar Orçamento' }}
                 </button>
               </form>
 
@@ -137,7 +137,7 @@
                 <div class="flex items-center">
                   <Icon name="mdi:check-circle" class="text-green-600 mr-2" />
                   <p class="text-green-800 font-medium">
-                    Mensagem enviada com sucesso! Entraremos em contato em breve.
+                    Solicitação enviada com sucesso! Nossa equipe entrará em contato em breve com seu orçamento.
                   </p>
                 </div>
               </div>
@@ -147,21 +147,24 @@
           <!-- Informações de Contato -->
           <div class="animate-slide-in-right">
             <div class="space-y-8">
-              <!-- Contatos Diretos -->
-              <div class="card-promaster p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6">Fale Conosco</h3>
-                <div class="space-y-6">
-                  <!-- Email -->
+              <!-- PROMASTER CURITIBA -->
+              <div class="card-promaster p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">PROMASTER CURITIBA</h3>
+                <div class="space-y-4">
+                  <!-- Endereço -->
                   <div class="flex items-start space-x-4">
                     <div class="flex-shrink-0">
                       <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
-                        <Icon name="mdi:email" class="text-xl text-[#0194DA]" />
+                        <Icon name="mdi:map-marker" class="text-xl text-[#0194DA]" />
                       </div>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-gray-900 mb-1">E-mail</h4>
-                      <p class="text-gray-600">contato@promaster.eco.br</p>
-                      <p class="text-gray-600">comercial@promaster.eco.br</p>
+                      <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
+                      <p class="text-gray-600">
+                        R. Dep. João Ribeiro Júnior, 94<br>
+                        Administração Regional da Cidade Industrial de Curitiba<br>
+                        Curitiba - PR, 81350-220
+                      </p>
                     </div>
                   </div>
 
@@ -174,25 +177,22 @@
                     </div>
                     <div>
                       <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
-                      <p class="text-gray-600">(11) 3000-0000</p>
-                      <p class="text-gray-600">(11) 99999-9999</p>
+                      <p class="text-gray-600">(41) 3011-0777</p>
                     </div>
                   </div>
 
-                  <!-- Endereço -->
+                  <!-- WhatsApp -->
                   <div class="flex items-start space-x-4">
                     <div class="flex-shrink-0">
-                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
-                        <Icon name="mdi:map-marker" class="text-xl text-[#0194DA]" />
+                      <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:whatsapp" class="text-xl text-green-500" />
                       </div>
                     </div>
                     <div>
-                      <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
-                      <p class="text-gray-600">
-                        Av. Paulista, 1000<br>
-                        São Paulo, SP - 01310-100<br>
-                        Brasil
-                      </p>
+                      <h4 class="font-semibold text-gray-900 mb-1">WhatsApp</h4>
+                      <a href="https://api.whatsapp.com/send?phone=5541998573333" target="_blank" class="text-green-600 hover:text-green-700 transition-colors">
+                        (41) 99857-3333
+                      </a>
                     </div>
                   </div>
 
@@ -206,9 +206,86 @@
                     <div>
                       <h4 class="font-semibold text-gray-900 mb-1">Horário de Atendimento</h4>
                       <p class="text-gray-600">
-                        Segunda a Sexta: 8h às 18h<br>
-                        Sábado: 8h às 12h
+                        08h - 12h e 13h15 - 18h
                       </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PROMASTER MARINGÁ -->
+              <div class="card-promaster p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">PROMASTER MARINGÁ</h3>
+                <div class="space-y-4">
+                  <!-- Endereço -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:map-marker" class="text-xl text-[#0194DA]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
+                      <p class="text-gray-600">
+                        Rua: Pioneiro Arlindo Pedralli, 1967<br>
+                        Jardim Santa Helena<br>
+                        Maringá - PR, 87083-327
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Telefone -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:phone" class="text-xl text-[#0194DA]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
+                      <p class="text-gray-600">(44) 3253-4723</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PROMASTER CASCAVEL -->
+              <div class="card-promaster p-8 mb-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">PROMASTER CASCAVEL</h3>
+                <div class="space-y-4">
+                  <!-- Endereço -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:map-marker" class="text-xl text-[#0194DA]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
+                      <p class="text-gray-600">
+                        Av. Aracy Tanaka Biazetto, 9930<br>
+                        BRCAO 04 - Parque São Paulo<br>
+                        Cascavel - PR, 85803-971
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Contato Geral -->
+              <div class="card-promaster p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Contato Geral</h3>
+                <div class="space-y-4">
+                  <!-- Email -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:email" class="text-xl text-[#0194DA]" />
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-gray-900 mb-1">E-mail</h4>
+                      <p class="text-gray-600">contato@promaster.eco.br</p>
                     </div>
                   </div>
                 </div>
@@ -251,70 +328,118 @@
         </div>
 
         <div class="max-w-3xl mx-auto space-y-4">
-          <!-- FAQ Item -->
+          <!-- FAQ Item 1 -->
           <div class="card-promaster overflow-hidden">
             <button
               @click="toggleFaq(0)"
               class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
             >
-              <span class="font-semibold text-gray-900">Qual é o tempo médio de entrega dos projetos?</span>
+              <span class="font-semibold text-gray-900">Quais são os prazos de entrega dos produtos?</span>
               <Icon :name="openFaq === 0 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
             </button>
             <div v-show="openFaq === 0" class="px-6 pb-4">
               <p class="text-gray-600">
-                O tempo de entrega varia conforme a complexidade do projeto. Projetos simples podem ser entregues 
-                em 2-4 semanas, enquanto projetos mais complexos podem levar 2-6 meses. Sempre definimos um cronograma 
-                detalhado durante a fase de planejamento.
+                <strong>Curitiba:</strong> Entrega expressa em até 30 minutos para produtos em estoque.<br>
+                <strong>Maringá e Cascavel:</strong> Entrega em até 2 dias úteis.<br>
+                Mantemos aproximadamente 150 toneladas de produtos à pronta entrega em nosso estoque.
               </p>
             </div>
           </div>
 
+          <!-- FAQ Item 2 -->
           <div class="card-promaster overflow-hidden">
             <button
               @click="toggleFaq(1)"
               class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
             >
-              <span class="font-semibold text-gray-900">Vocês oferecem suporte pós-entrega?</span>
+              <span class="font-semibold text-gray-900">Como funciona o serviço de identificação de cores?</span>
               <Icon :name="openFaq === 1 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
             </button>
             <div v-show="openFaq === 1" class="px-6 pb-4">
               <p class="text-gray-600">
-                Sim! Oferecemos diferentes planos de suporte pós-entrega, incluindo manutenção, atualizações, 
-                monitoramento e suporte técnico. O suporte pode ser contratado por período determinado ou sob demanda.
+                Temos um laboratório próprio para identificação de cores com equipamentos especializados. 
+                Você pode enviar uma amostra da cor desejada e nossos técnicos farão a análise para encontrar 
+                o pigmento mais adequado. Este serviço garante precisão na cor e qualidade do produto final.
               </p>
             </div>
           </div>
 
+          <!-- FAQ Item 3 -->
           <div class="card-promaster overflow-hidden">
             <button
               @click="toggleFaq(2)"
               class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
             >
-              <span class="font-semibold text-gray-900">Como é feito o orçamento dos projetos?</span>
+              <span class="font-semibold text-gray-900">Quais tipos de produtos vocês comercializam?</span>
               <Icon :name="openFaq === 2 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
             </button>
             <div v-show="openFaq === 2" class="px-6 pb-4">
               <p class="text-gray-600">
-                Fazemos uma análise detalhada dos requisitos do seu projeto para elaborar um orçamento personalizado. 
-                Consideramos escopo, complexidade, tecnologias envolvidas e prazo desejado. O orçamento é sempre 
-                transparente e sem custos ocultos.
+                Somos especializados em três principais linhas de produtos para termoplásticos:<br>
+                <strong>• Pigmentos:</strong> Ampla variedade de cores para termoplásticos<br>
+                <strong>• Aditivos:</strong> Produtos que melhoram propriedades e qualidade final<br>
+                <strong>• Resinas Recicláveis:</strong> Materiais sustentáveis de alta qualidade
               </p>
             </div>
           </div>
 
+          <!-- FAQ Item 4 -->
           <div class="card-promaster overflow-hidden">
             <button
               @click="toggleFaq(3)"
               class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
             >
-              <span class="font-semibold text-gray-900">Trabalham com quais tecnologias?</span>
+              <span class="font-semibold text-gray-900">Qual é a cobertura de atendimento da Promaster?</span>
               <Icon :name="openFaq === 3 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
             </button>
             <div v-show="openFaq === 3" class="px-6 pb-4">
               <p class="text-gray-600">
-                Trabalhamos com uma ampla gama de tecnologias modernas incluindo Vue.js, React, Node.js, Python, 
-                Docker, AWS, entre outras. Nossa equipe está sempre atualizada com as últimas tendências e melhores 
-                práticas do mercado.
+                Atendemos todo o estado do Paraná com três unidades estrategicamente localizadas:<br>
+                <strong>• Curitiba:</strong> Sede principal com laboratório e maior estoque<br>
+                <strong>• Maringá:</strong> Unidade para atendimento da região norte<br>
+                <strong>• Cascavel:</strong> Unidade para atendimento da região oeste<br>
+                Trabalhamos com produtos do Brasil inteiro, levando variedade até você.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 5 -->
+          <div class="card-promaster overflow-hidden">
+            <button
+              @click="toggleFaq(4)"
+              class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+            >
+              <span class="font-semibold text-gray-900">Como solicitar um orçamento?</span>
+              <Icon :name="openFaq === 4 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
+            </button>
+            <div v-show="openFaq === 4" class="px-6 pb-4">
+              <p class="text-gray-600">
+                Para solicitar um orçamento, você pode:<br>
+                • Preencher o formulário de contato nesta página especificando os produtos desejados<br>
+                • Ligar diretamente para uma de nossas unidades<br>
+                • Enviar um e-mail para contato@promaster.eco.br<br>
+                Precisaremos de informações como tipo de produto, quantidade e especificações técnicas.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ Item 6 -->
+          <div class="card-promaster overflow-hidden">
+            <button
+              @click="toggleFaq(5)"
+              class="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors"
+            >
+              <span class="font-semibold text-gray-900">Vocês oferecem suporte técnico?</span>
+              <Icon :name="openFaq === 5 ? 'mdi:chevron-up' : 'mdi:chevron-down'" class="text-[#0194DA]" />
+            </button>
+            <div v-show="openFaq === 5" class="px-6 pb-4">
+              <p class="text-gray-600">
+                Sim! Nossa equipe técnica oferece suporte especializado em termoplásticos, incluindo:<br>
+                • Orientação sobre aplicação dos produtos<br>
+                • Identificação de cores no laboratório<br>
+                • Recomendações técnicas para melhor resultado<br>
+                • Suporte pós-venda para dúvidas e ajustes<br>
+                Temos conhecimento especializado com mais de 6 anos de experiência no mercado.
               </p>
             </div>
           </div>
@@ -327,15 +452,15 @@
       <div class="container mx-auto px-4 text-center">
         <div class="max-w-3xl mx-auto">
           <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 font-poppins">
-            Vamos começar juntos?
+            Pronto para conhecer nossos produtos?
           </h2>
           <p class="text-xl text-white/90 mb-8">
-            Entre em contato conosco e transforme suas ideias em realidade
+            Entre em contato conosco e descubra como podemos atender suas necessidades em termoplásticos
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:+5511999999999" class="bg-white text-[#0194DA] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
-              <Icon name="mdi:phone" class="mr-2" />
-              Ligar Agora
+            <a href="https://api.whatsapp.com/send?phone=5541998573333&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20produtos%20para%20termoplásticos." target="_blank" class="bg-white text-[#0194DA] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
+              <Icon name="mdi:whatsapp" class="mr-2" />
+              Enviar mensagem WhatsApp
             </a>
             <a href="mailto:contato@promaster.eco.br" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-[#0194DA] transition-all duration-300 inline-flex items-center justify-center">
               <Icon name="mdi:email" class="mr-2" />
@@ -404,12 +529,12 @@ const toggleFaq = (index) => {
 
 // SEO Meta Tags
 useHead({
-  title: 'Contato - Promaster | Entre em contato conosco',
+  title: 'Contato - Promaster Distribuidora | Pigmentos e Termoplásticos no Paraná',
   meta: [
-    { name: 'description', content: 'Entre em contato com a Promaster. Tire suas dúvidas, solicite orçamentos e descubra como podemos ajudar seu negócio com nossas soluções inovadoras.' },
-    { name: 'keywords', content: 'contato promaster, orçamento, consultoria, suporte, telefone, email, endereço' },
-    { property: 'og:title', content: 'Contato - Promaster | Entre em contato conosco' },
-    { property: 'og:description', content: 'Fale conosco e descubra como a Promaster pode transformar seu negócio.' }
+    { name: 'description', content: 'Entre em contato com a Promaster Distribuidora. Solicite orçamentos de pigmentos, aditivos e resinas para termoplásticos. Atendemos Curitiba, Maringá e Cascavel-PR.' },
+    { name: 'keywords', content: 'contato promaster, pigmentos paraná, termoplásticos curitiba, aditivos maringá, resinas cascavel, orçamento, distribuidora' },
+    { property: 'og:title', content: 'Contato - Promaster Distribuidora | Pigmentos e Termoplásticos' },
+    { property: 'og:description', content: 'Fale conosco para pigmentos, aditivos e resinas. Laboratório próprio e estoque à pronta entrega no Paraná.' }
   ]
 })
 </script>

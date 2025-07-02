@@ -14,11 +14,15 @@
               <Icon name="mdi:truck-fast" class="text-cyan-300" />
               <span>Entrega expressa: 30min em Curitiba</span>
             </div>
+            <div class="flex items-center space-x-2">
+              <Icon name="mdi:map-marker-radius" class="text-cyan-300" />
+              <span>Cascavel (entrega em até 2 dias úteis)</span>
+            </div>
           </div>
           <div class="flex items-center space-x-4">
             <div class="flex items-center space-x-2">
               <Icon name="mdi:phone" class="text-cyan-300" />
-              <span>(41) 9999-9999</span>
+              <span>(41) 3011-0777</span>
             </div>
             <div class="flex items-center space-x-2">
               <Icon name="mdi:email" class="text-cyan-300" />
@@ -41,14 +45,7 @@
                 class="relative h-12 w-auto rounded-lg"
               />
             </div>
-            <div class="hidden sm:block">
-              <div class="text-2xl font-black text-white font-poppins tracking-tight">
-                PROMASTER
-              </div>
-              <div class="text-xs text-cyan-300 font-medium tracking-widest -mt-1">
-                DISTRIBUIDORA
-              </div>
-            </div>
+            
           </div>
 
           <!-- Menu Desktop -->
@@ -69,13 +66,13 @@
               <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
             </NuxtLink>
             
-            <NuxtLink to="/produtos" class="nav-item group relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm">
+            <button @click="scrollToProdutos" class="nav-item group relative px-4 py-2 rounded-lg transition-all duration-300 hover:bg-white/5 hover:backdrop-blur-sm">
               <div class="flex items-center space-x-2">
                 <Icon name="mdi:palette" class="text-cyan-300 transition-colors" />
                 <span class="text-white font-medium">PRODUTOS</span>
               </div>
               <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
-            </NuxtLink>
+            </button>
             
             <NuxtLink to="/contato" class="nav-item group relative px-6 py-3 ml-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl font-bold transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-500/25">
               <div class="flex items-center space-x-2">
@@ -126,14 +123,13 @@
               <Icon name="mdi:office-building" class="text-cyan-300" />
               <span>EMPRESA</span>
             </NuxtLink>
-            <NuxtLink 
-              to="/produtos" 
-              @click="mobileMenuOpen = false"
-              class="flex items-center space-x-3 text-white hover:text-cyan-300 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-white/10"
+            <button 
+              @click="scrollToProdutos(); mobileMenuOpen = false"
+              class="flex items-center space-x-3 text-white hover:text-cyan-300 transition-colors font-medium py-3 px-4 rounded-lg hover:bg-white/10 w-full text-left"
             >
               <Icon name="mdi:palette" class="text-cyan-300" />
               <span>PRODUTOS</span>
-            </NuxtLink>
+            </button>
             <NuxtLink 
               to="/contato" 
               @click="mobileMenuOpen = false"
@@ -182,9 +178,9 @@
               <NuxtLink to="/empresa" class="block text-gray-400 hover:text-[#0194DA] transition-colors">
                 Empresa
               </NuxtLink>
-              <NuxtLink to="/produtos" class="block text-gray-400 hover:text-[#0194DA] transition-colors">
+              <button @click="scrollToProdutos" class="block text-gray-400 hover:text-[#0194DA] transition-colors text-left">
                 Produtos
-              </NuxtLink>
+              </button>
               <NuxtLink to="/contato" class="block text-gray-400 hover:text-[#0194DA] transition-colors">
                 Contato
               </NuxtLink>
@@ -199,13 +195,23 @@
                 <Icon name="mdi:email" class="text-[#0194DA]" />
                 <span class="text-gray-400">contato@promaster.eco.br</span>
               </div>
-              <div class="flex items-center space-x-2">
-                <Icon name="mdi:phone" class="text-[#0194DA]" />
-                <span class="text-gray-400">(11) 9999-9999</span>
+              <div class="space-y-2">
+                <div class="flex items-center space-x-2">
+                  <Icon name="mdi:phone" class="text-[#0194DA]" />
+                  <span class="text-gray-400">Curitiba: (41) 3011-0777</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <Icon name="mdi:phone" class="text-[#0194DA]" />
+                  <span class="text-gray-400">Maringá: (44) 3253-4723</span>
+                </div>
               </div>
-              <div class="flex items-center space-x-2">
-                <Icon name="mdi:map-marker" class="text-[#0194DA]" />
-                <span class="text-gray-400">São Paulo, SP</span>
+              <div class="flex items-start space-x-2">
+                <Icon name="mdi:map-marker" class="text-[#0194DA] mt-1" />
+                <div class="text-gray-400 text-sm">
+                  <div class="mb-1">Curitiba - PR</div>
+                  <div class="mb-1">Maringá - PR</div>
+                  <div>Cascavel - PR</div>
+                </div>
               </div>
             </div>
           </div>
@@ -220,11 +226,26 @@
       </div>
     </footer>
 
+    <!-- Botão WhatsApp Flutuante -->
+    <a
+      href="https://api.whatsapp.com/send?phone=5541998573333&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos."
+      target="_blank"
+      class="fixed bottom-20 right-6 w-14 h-14 bg-green-500 text-white rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 group flex items-center justify-center"
+      title="Fale conosco pelo WhatsApp"
+    >
+      <Icon name="mdi:whatsapp" class="text-2xl" />
+      <!-- Tooltip -->
+      <div class="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        Fale conosco!
+        <div class="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-gray-800"></div>
+      </div>
+    </a>
+
     <!-- Botão Voltar ao Topo -->
     <button
       v-show="showScrollTop"
       @click="scrollToTop"
-      class="fixed bottom-6 right-6 bg-[#0194DA] text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-40 hover-lift"
+      class="fixed bottom-6 right-6 w-12 h-12 bg-[#0194DA] text-white rounded-full shadow-lg hover:bg-blue-600 transition-all duration-300 z-40 hover-lift flex items-center justify-center"
     >
       <Icon name="mdi:arrow-up" class="text-xl" />
     </button>
@@ -236,6 +257,23 @@ import { ref, onMounted, onUnmounted } from 'vue'
 
 const mobileMenuOpen = ref(false)
 const showScrollTop = ref(false)
+
+// Função para scroll suave até seção de produtos
+const scrollToProdutos = () => {
+  // Se estiver na home
+  if (process.client && window.location.pathname === '/') {
+    const section = document.getElementById('produtos')
+    if (section) {
+      section.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  } else {
+    // Se não estiver na home, navegar para home e depois scroll
+    navigateTo('/#produtos')
+  }
+}
 
 const handleScroll = () => {
   showScrollTop.value = window.scrollY > 300
@@ -250,6 +288,19 @@ const scrollToTop = () => {
 
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+  
+  // Verificar se há hash na URL e fazer scroll
+  if (window.location.hash === '#produtos') {
+    setTimeout(() => {
+      const section = document.getElementById('produtos')
+      if (section) {
+        section.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }, 100)
+  }
 })
 
 onUnmounted(() => {

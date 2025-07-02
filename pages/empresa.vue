@@ -52,8 +52,10 @@
               <div class="bg-[#0194DA]/10 rounded-3xl p-8">
                 <Icon name="mdi:office-building" class="text-8xl text-[#0194DA] mx-auto block mb-4" />
                 <div class="text-center">
-                  <h3 class="text-2xl font-bold text-gray-900 mb-2">Nossa Sede</h3>
-                  <p class="text-gray-600">São Paulo, SP - Brasil</p>
+                  <h3 class="text-2xl font-bold text-gray-900 mb-2">Nossas Unidades</h3>
+                  <p class="text-gray-600">Curitiba - PR</p>
+                  <p class="text-gray-600">Maringá - PR</p>
+                  <p class="text-gray-600">Cascavel - PR</p>
                 </div>
               </div>
             </div>

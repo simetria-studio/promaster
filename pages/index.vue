@@ -64,13 +64,13 @@
 
             <!-- CTAs Diferenciados -->
             <div class="flex flex-col sm:flex-row gap-4">
-              <NuxtLink to="/produtos" class="group relative bg-gradient-to-r from-[#0194DA] to-cyan-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0194DA]/25 overflow-hidden">
+              <button @click="scrollToProdutos" class="group relative bg-gradient-to-r from-[#0194DA] to-cyan-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0194DA]/25 overflow-hidden">
                 <div class="relative z-10 flex items-center justify-center">
                   <Icon name="mdi:palette" class="mr-2" />
                   Catálogo de Produtos
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-r from-cyan-500 to-[#0194DA] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </NuxtLink>
+              </button>
               
               <NuxtLink to="/contato" class="group border-2 border-white/30 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:bg-white hover:text-gray-900 backdrop-blur-sm bg-white/5">
                 <div class="flex items-center justify-center">
@@ -214,7 +214,7 @@
                 </div>
                 <div class="flex items-center space-x-2">
                   <Icon name="mdi:check-circle" class="text-[#0194DA] text-xl" />
-                  <span class="text-gray-700">Até 2 dias para toda região de Maringá</span>
+                  <span class="text-gray-700">Até 2 dias para Maringá e Cascavel</span>
                 </div>
               </div>
             </div>
@@ -272,7 +272,7 @@
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Entrega Rápida</h3>
             <p class="text-gray-600 leading-relaxed">
               Localização estratégica permite entregas em 30 minutos em Curitiba 
-              e até 2 dias para região de Maringá.
+              e até 2 dias para as regiões de Maringá e Cascavel.
             </p>
           </div>
 
@@ -316,7 +316,7 @@
     </section>
 
     <!-- Seção Produtos/Serviços -->
-    <section class="py-24 gradient-bg-gray">
+    <section id="produtos" class="py-24 gradient-bg-gray">
       <div class="container mx-auto px-4">
         <div class="text-center mb-16">
           <div class="inline-flex items-center bg-[#0194DA]/10 text-[#0194DA] px-4 py-2 rounded-full text-sm font-semibold mb-6">
@@ -382,14 +382,10 @@
           <p class="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
             Nossa meta é trabalhar com excelência e qualidade, garantindo sempre a melhor experiência
           </p>
-          <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <div class="flex justify-center">
             <NuxtLink to="/contato" class="bg-white text-[#0194DA] px-10 py-5 rounded-xl font-semibold text-xl hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
               <Icon name="mdi:phone" class="mr-2" />
               Solicite um Orçamento
-            </NuxtLink>
-            <NuxtLink to="/produtos" class="border-2 border-white text-white px-10 py-5 rounded-xl font-semibold text-xl hover:bg-white hover:text-[#0194DA] transition-all duration-300 inline-flex items-center justify-center">
-              <Icon name="mdi:warehouse" class="mr-2" />
-              Nosso Estoque
             </NuxtLink>
           </div>
         </div>
@@ -409,7 +405,7 @@
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="card-feature p-8 text-center hover-lift">
             <Icon name="mdi:city" class="text-6xl text-[#0194DA] mx-auto mb-6" />
             <h3 class="text-2xl font-bold text-gray-900 mb-4">Curitiba</h3>
@@ -433,6 +429,18 @@
               Entrega em até 2 dias
             </div>
           </div>
+
+          <div class="card-feature p-8 text-center hover-lift">
+            <Icon name="mdi:map-marker-radius" class="text-6xl text-[#0194DA] mx-auto mb-6" />
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Cascavel</h3>
+            <p class="text-gray-600 mb-4">
+              Atendimento completo para toda a região de Cascavel
+            </p>
+            <div class="text-[#0194DA] font-semibold">
+              <Icon name="mdi:clock" class="inline mr-2" />
+              Entrega em até 2 dias úteis
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -440,14 +448,25 @@
 </template>
 
 <script setup>
+// Função para scroll suave até seção de produtos
+const scrollToProdutos = () => {
+  const section = document.getElementById('produtos')
+  if (section) {
+    section.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    })
+  }
+}
+
 // SEO Meta Tags
 useHead({
   title: 'Promaster Distribuidora - Pigmentos e Aditivos para Termoplásticos | Paraná',
   meta: [
-    { name: 'description', content: 'Promaster Distribuidora: empresa familiar especializada em pigmentos, aditivos para termoplásticos e resinas recicláveis. Atendemos todo o Paraná com estoque pronta entrega em Curitiba e Maringá.' },
-    { name: 'keywords', content: 'promaster, distribuidora, pigmentos, termoplásticos, aditivos, resinas recicláveis, curitiba, maringá, paraná' },
+    { name: 'description', content: 'Promaster Distribuidora: empresa familiar especializada em pigmentos, aditivos para termoplásticos e resinas recicláveis. Atendemos todo o Paraná com estoque pronta entrega em Curitiba, Maringá e Cascavel.' },
+    { name: 'keywords', content: 'promaster, distribuidora, pigmentos, termoplásticos, aditivos, resinas recicláveis, curitiba, maringá, cascavel, paraná' },
     { property: 'og:title', content: 'Promaster Distribuidora - Pigmentos e Aditivos para Termoplásticos' },
-    { property: 'og:description', content: 'Empresa familiar dedicada à distribuição de pigmentos e aditivos para termoplásticos em todo o Paraná.' },
+    { property: 'og:description', content: 'Empresa familiar dedicada à distribuição de pigmentos e aditivos para termoplásticos no Paraná. Atendemos Curitiba, Maringá e Cascavel.' },
     { property: 'og:type', content: 'website' },
     { property: 'og:url', content: 'https://www.promaster.eco.br/' }
   ]
