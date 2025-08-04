@@ -34,16 +34,16 @@
               <span>Especialistas em Termoplásticos desde 2018</span>
             </div>
 
-            <!-- Logo/Nome Grande -->
-            <div class="mb-6">
-              <h1 class="text-6xl md:text-7xl font-black text-white mb-2 font-poppins tracking-tight">
-                PROMASTER
-              </h1>
-              <div class="flex items-center space-x-4">
-                <div class="h-1 w-24 bg-gradient-to-r from-[#0194DA] to-cyan-400"></div>
-                <span class="text-2xl md:text-3xl text-gray-300 font-light tracking-widest">DISTRIBUIDORA</span>
-              </div>
-            </div>
+                         <!-- Logo/Nome Grande -->
+             <div class="mb-6">
+               <h1 class="text-6xl md:text-7xl font-black text-white mb-2 font-poppins tracking-tight">
+                 PROMASTER
+               </h1>
+               <div class="flex items-center space-x-4">
+                 <div class="h-1 w-24 bg-gradient-to-r from-[#0194DA] to-cyan-400"></div>
+                 <span class="text-2xl md:text-3xl text-gray-300 font-light tracking-widest">DISTRIBUIDORA</span>
+               </div>
+             </div>
 
             <!-- Slogan Impactante -->
             <div class="mb-8">
@@ -436,9 +436,9 @@
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-poppins">
             <span class="text-gradient">Soluções</span> para termoplásticos
           </h2>
-          <p class="text-xl text-gray-600">
-            Distribuição especializada para o mercado termoplástico
-          </p>
+                     <p class="text-xl text-gray-600">
+             Distribuição especializada para o mercado termoplástico
+           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

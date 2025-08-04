@@ -38,7 +38,7 @@
               <NuxtImg 
                 src="/logo.jpg" 
                 alt="Promaster Logo" 
-                class="relative h-12 w-auto rounded-lg"
+                class="relative h-16 w-auto rounded-lg"
               />
             </div>
             
