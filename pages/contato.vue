@@ -175,26 +175,16 @@
                         <Icon name="mdi:phone" class="text-xl text-[#0194DA]" />
                       </div>
                     </div>
-                    <div>
-                      <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
-                      <p class="text-gray-600">(41) 3011-0777</p>
-                    </div>
+                                         <div>
+                       <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
+                       <div class="flex items-center space-x-2">
+                         <a href="https://api.whatsapp.com/send?phone=554130110777&text=Olá,%20vim%20pelo%20site%20da%20Promaster%20Curitiba.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-600 hover:text-[#0194DA] transition-colors cursor-pointer">(41) 3011-0777</a>
+                         <Icon name="mdi:whatsapp" class="text-green-500 text-lg" />
+                       </div>
+                     </div>
                   </div>
 
-                  <!-- WhatsApp -->
-                  <div class="flex items-start space-x-4">
-                    <div class="flex-shrink-0">
-                      <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center">
-                        <Icon name="mdi:whatsapp" class="text-xl text-green-500" />
-                      </div>
-                    </div>
-                    <div>
-                      <h4 class="font-semibold text-gray-900 mb-1">WhatsApp</h4>
-                      <a href="https://api.whatsapp.com/send?phone=5541998573333" target="_blank" class="text-green-600 hover:text-green-700 transition-colors">
-                        (41) 99857-3333
-                      </a>
-                    </div>
-                  </div>
+
 
                   <!-- Horário -->
                   <div class="flex items-start space-x-4">
@@ -241,10 +231,13 @@
                         <Icon name="mdi:phone" class="text-xl text-[#0194DA]" />
                       </div>
                     </div>
-                    <div>
-                      <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
-                      <p class="text-gray-600">(44) 3253-4723</p>
-                    </div>
+                                         <div>
+                       <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
+                       <div class="flex items-center space-x-2">
+                         <a href="https://api.whatsapp.com/send?phone=554432534723&text=Olá,%20vim%20pelo%20site%20da%20Promaster%20Maringá.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-600 hover:text-[#0194DA] transition-colors cursor-pointer">(44) 3253-4723</a>
+                         <Icon name="mdi:whatsapp" class="text-green-500 text-lg" />
+                       </div>
+                     </div>
                   </div>
                 </div>
               </div>
@@ -268,6 +261,22 @@
                         Cascavel - PR, 85803-971
                       </p>
                     </div>
+                  </div>
+
+                  <!-- Telefone -->
+                  <div class="flex items-start space-x-4">
+                    <div class="flex-shrink-0">
+                      <div class="w-12 h-12 bg-[#0194DA]/10 rounded-lg flex items-center justify-center">
+                        <Icon name="mdi:phone" class="text-xl text-[#0194DA]" />
+                      </div>
+                    </div>
+                                         <div>
+                       <h4 class="font-semibold text-gray-900 mb-1">Telefone</h4>
+                       <div class="flex items-center space-x-2">
+                         <a href="https://api.whatsapp.com/send?phone=5545988289009&text=Olá,%20vim%20pelo%20site%20da%20Promaster%20Cascavel.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-600 hover:text-[#0194DA] transition-colors cursor-pointer">(45) 98828-9009</a>
+                         <Icon name="mdi:whatsapp" class="text-green-500 text-lg" />
+                       </div>
+                     </div>
                   </div>
                 </div>
               </div>
@@ -458,7 +467,7 @@
             Entre em contato conosco e descubra como podemos atender suas necessidades em termoplásticos
           </p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="https://api.whatsapp.com/send?phone=5541998573333&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20produtos%20para%20termoplásticos." target="_blank" class="bg-white text-[#0194DA] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
+            <a href="https://api.whatsapp.com/send?phone=554130110777&text=Olá,%20gostaria%20de%20solicitar%20um%20orçamento%20de%20produtos%20para%20termoplásticos." target="_blank" class="bg-white text-[#0194DA] px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
               <Icon name="mdi:whatsapp" class="mr-2" />
               Enviar mensagem WhatsApp
             </a>

@@ -33,10 +33,10 @@
               de diversos segmentos.
             </p>
             <div class="flex flex-wrap gap-4">
-              <div class="flex items-center space-x-2">
-                <Icon name="mdi:check-circle" class="text-[#0194DA] text-xl" />
-                <span class="text-gray-700 font-medium">Fundada em 2008</span>
-              </div>
+                             <div class="flex items-center space-x-2">
+                 <Icon name="mdi:check-circle" class="text-[#0194DA] text-xl" />
+                 <span class="text-gray-700 font-medium">Fundada em 2018</span>
+               </div>
               <div class="flex items-center space-x-2">
                 <Icon name="mdi:check-circle" class="text-[#0194DA] text-xl" />
                 <span class="text-gray-700 font-medium">+500 Projetos</span>
@@ -50,12 +50,25 @@
           <div class="animate-slide-in-right">
             <div class="relative">
               <div class="bg-[#0194DA]/10 rounded-3xl p-8">
-                <Icon name="mdi:office-building" class="text-8xl text-[#0194DA] mx-auto block mb-4" />
+                <div class="flex justify-center mb-4">
+                  <Icon name="mdi:office-building" class="text-8xl text-[#0194DA]" />
+                </div>
                 <div class="text-center">
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">Nossas Unidades</h3>
-                  <p class="text-gray-600">Curitiba - PR</p>
-                  <p class="text-gray-600">Maringá - PR</p>
-                  <p class="text-gray-600">Cascavel - PR</p>
+                  <div class="space-y-2">
+                    <div class="flex items-center justify-center space-x-2">
+                      <Icon name="mdi:map-marker" class="text-[#0194DA] text-lg" />
+                      <p class="text-gray-600">Curitiba - PR</p>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                      <Icon name="mdi:map-marker" class="text-[#0194DA] text-lg" />
+                      <p class="text-gray-600">Maringá - PR</p>
+                    </div>
+                    <div class="flex items-center justify-center space-x-2">
+                      <Icon name="mdi:map-marker" class="text-[#0194DA] text-lg" />
+                      <p class="text-gray-600">Cascavel - PR</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

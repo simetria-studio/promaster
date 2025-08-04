@@ -144,32 +144,73 @@
         </div>
       </div>
 
-      <!-- Scroll Indicator Diferenciado -->
-      <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-        <div class="flex flex-col items-center text-white/70 group cursor-pointer">
-          <span class="text-sm font-medium mb-2 group-hover:text-cyan-400 transition-colors">Explore nossos produtos</span>
-          <div class="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div class="w-1 h-3 bg-gradient-to-b from-[#0194DA] to-cyan-400 rounded-full mt-2 animate-bounce"></div>
-          </div>
-        </div>
-      </div>
+
     </section>
 
-    <!-- Seção Nossa História -->
-    <section class="py-24 gradient-bg-blue section-bg-pattern">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-20">
-          <div class="inline-flex items-center bg-[#0194DA]/10 text-[#0194DA] px-4 py-2 rounded-full text-sm font-semibold mb-6">
-            <Icon name="mdi:history" class="mr-2" />
-            Nossa História
-          </div>
-          <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-poppins">
-            Uma <span class="text-gradient">Trajetória</span> de Sucesso
-          </h2>
-          <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12">
-            Empresa familiar dedicada ao crescimento do mercado termoplástico no Paraná
-          </p>
-        </div>
+         <!-- Seção 7 Anos de Sucesso -->
+     <section class="py-24 bg-gradient-to-br from-[#0194DA] to-cyan-600 relative overflow-hidden">
+       <!-- Elementos decorativos -->
+       <div class="absolute inset-0">
+         <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl animate-pulse"></div>
+         <div class="absolute bottom-10 right-10 w-16 h-16 bg-white/15 rounded-full blur-lg animate-pulse" style="animation-delay: -1s;"></div>
+         <div class="absolute top-1/2 left-1/4 w-12 h-12 bg-white/20 rounded-full blur-md animate-pulse" style="animation-delay: -2s;"></div>
+       </div>
+       
+       <div class="container mx-auto px-4 text-center relative z-10">
+         <div class="max-w-4xl mx-auto">
+           <div class="inline-flex items-center bg-white/20 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8">
+             <Icon name="mdi:calendar-star" class="mr-2" />
+             Celebrando 7 Anos
+           </div>
+           
+           <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 font-poppins">
+             <span class="text-gradient-white">7 Anos</span> de Dedicação
+           </h2>
+           
+           <p class="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
+             Desde 2018, a Promaster tem sido referência em distribuição de pigmentos e aditivos para termoplásticos no Paraná
+           </p>
+           
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+               <div class="text-4xl font-bold text-white mb-2">7</div>
+               <div class="text-white/90 font-semibold">Anos de Experiência</div>
+             </div>
+             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+               <div class="text-4xl font-bold text-white mb-2">500+</div>
+               <div class="text-white/90 font-semibold">Clientes Atendidos</div>
+             </div>
+             <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
+               <div class="text-4xl font-bold text-white mb-2">150t</div>
+               <div class="text-white/90 font-semibold">Estoque Disponível</div>
+             </div>
+           </div>
+           
+           <div class="flex justify-center">
+             <NuxtLink to="/empresa" class="bg-white text-[#0194DA] px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all duration-300 hover-lift inline-flex items-center justify-center">
+               <Icon name="mdi:information" class="mr-2" />
+               Conheça Nossa História Completa
+             </NuxtLink>
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <!-- Seção Nossa História -->
+     <section class="py-24 gradient-bg-blue section-bg-pattern">
+       <div class="container mx-auto px-4">
+         <div class="text-center mb-20">
+           <div class="inline-flex items-center bg-[#0194DA]/10 text-[#0194DA] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+             <Icon name="mdi:history" class="mr-2" />
+             Nossa História
+           </div>
+           <h2 class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 font-poppins">
+             Uma <span class="text-gradient">Trajetória</span> de Sucesso
+           </h2>
+           <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto mb-12">
+             Empresa familiar dedicada ao crescimento do mercado termoplástico no Paraná
+           </p>
+         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div class="animate-slide-in-left">
@@ -194,10 +235,10 @@
           <div class="animate-slide-in-right">
             <div class="card-feature p-8">
               <h3 class="text-3xl font-bold text-gray-900 mb-6">Crescimento e Expansão</h3>
-              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
-                <span class="text-[#0194DA] font-semibold">Clientes viraram amigos, amigos viraram parceiros</span> 
-                e a Promaster continua crescendo a cada dia, completando 6 anos neste mercado.
-              </p>
+                             <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                 <span class="text-[#0194DA] font-semibold">Clientes viraram amigos, amigos viraram parceiros</span> 
+                 e a Promaster continua crescendo a cada dia, completando 7 anos neste mercado.
+               </p>
               <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                 Hoje, trabalhamos em dois barracões de mais de 500m², temos um 
                 <span class="text-[#0194DA] font-semibold">laboratório para identificação de cor</span>, 
@@ -219,6 +260,75 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Explore Nossos Produtos -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-[#0194DA]/10 text-[#0194DA] px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Icon name="mdi:palette" class="mr-2" />
+            Explore Nossos Produtos
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
+            <span class="text-gradient">Soluções</span> Completas
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Distribuição especializada de pigmentos, aditivos e resinas recicláveis para termoplásticos
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <div class="card-promaster p-8 text-center hover-lift group">
+            <div class="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <Icon name="mdi:palette" class="text-3xl text-white" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Pigmentos</h3>
+            <p class="text-gray-600 mb-6">
+              Ampla variedade de pigmentos para termoplásticos com laboratório próprio para identificação de cores.
+            </p>
+            <div class="text-[#0194DA] font-semibold">
+              <Icon name="mdi:flask" class="inline mr-2" />
+              Identificação de Cores
+            </div>
+          </div>
+          
+          <div class="card-promaster p-8 text-center hover-lift group">
+            <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <Icon name="mdi:test-tube" class="text-3xl text-white" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Aditivos</h3>
+            <p class="text-gray-600 mb-6">
+              Aditivos especializados para termoplásticos, melhorando propriedades e qualidade final.
+            </p>
+            <div class="text-[#0194DA] font-semibold">
+              <Icon name="mdi:star" class="inline mr-2" />
+              Qualidade Garantida
+            </div>
+          </div>
+          
+          <div class="card-promaster p-8 text-center hover-lift group">
+            <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+              <Icon name="mdi:recycle" class="text-3xl text-white" />
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Resinas Recicláveis</h3>
+            <p class="text-gray-600 mb-6">
+              Resinas recicláveis de alta qualidade, contribuindo para sustentabilidade ambiental.
+            </p>
+            <div class="text-[#0194DA] font-semibold">
+              <Icon name="mdi:leaf" class="inline mr-2" />
+              Sustentabilidade
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <button @click="scrollToProdutos" class="bg-gradient-to-r from-[#0194DA] to-cyan-500 text-white px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-[#0194DA]/25 inline-flex items-center">
+            <Icon name="mdi:arrow-down" class="mr-2" />
+            Ver Todos os Produtos
+          </button>
         </div>
       </div>
     </section>
@@ -305,7 +415,7 @@
             <div class="icon-container w-20 h-20 mx-auto mb-6 flex items-center justify-center">
               <Icon name="mdi:map-marker-multiple" class="text-4xl text-[#0194DA] icon group-hover:scale-110 transition-transform" />
             </div>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">Cobertura Total PR</h3>
+                         <h3 class="text-2xl font-bold text-gray-900 mb-4">Cobertura Total Paraná</h3>
             <p class="text-gray-600 leading-relaxed">
               Atendemos todo o estado do Paraná com produtos do Brasil inteiro, 
               levando variedade até você.
@@ -324,7 +434,7 @@
             Nossos Produtos
           </div>
           <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-poppins">
-            <span class="text-gradient">Soluções</span> para Termoplásticos
+            <span class="text-gradient">Soluções</span> para termoplásticos
           </h2>
           <p class="text-xl text-gray-600">
             Distribuição especializada para o mercado termoplástico
@@ -389,6 +499,63 @@
             </NuxtLink>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Seção Instagram -->
+    <section class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <div class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6">
+            <Icon name="mdi:instagram" class="mr-2" />
+            Siga-nos no Instagram
+          </div>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-poppins">
+            <span class="text-gradient">@distribuidorapromaster</span>
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Acompanhe nosso dia a dia, novidades e projetos especiais
+          </p>
+        </div>
+
+         <!-- Feed do Instagram -->
+         <div class="mb-8">
+           <div class="bg-white rounded-xl shadow-lg p-6">
+             <div class="text-center mb-6">
+               <h3 class="text-2xl font-bold text-gray-900 mb-2">Feed do Instagram</h3>
+               <p class="text-gray-600">Posts reais do @distribuidorapromaster</p>
+             </div>
+             
+                           <!-- Instagram Embed Simples -->
+              <div class="flex justify-center">
+                <iframe 
+                  src="https://www.instagram.com/distribuidorapromaster/embed" 
+                  width="600" 
+                  height="600" 
+                  frameborder="0" 
+                  scrolling="no" 
+                  allowtransparency="true"
+                  class="rounded-lg shadow-lg"
+                ></iframe>
+              </div>
+             
+             <!-- Alternativa: Link direto para o perfil -->
+             <div class="text-center mt-6">
+               <p class="text-gray-600 mb-4">Para ver posts reais, acesse nosso perfil:</p>
+               <a 
+                 href="https://www.instagram.com/distribuidorapromaster" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 class="inline-flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:scale-105 hover:shadow-lg transition-all duration-300"
+               >
+                 <Icon name="mdi:instagram" class="mr-2" />
+                 Ver Perfil Completo
+               </a>
+             </div>
+           </div>
+         </div>
+
+         
       </div>
     </section>
 

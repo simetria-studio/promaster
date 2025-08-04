@@ -12,18 +12,14 @@
             </div>
             <div class="flex items-center space-x-2">
               <Icon name="mdi:truck-fast" class="text-cyan-300" />
-              <span>Entrega expressa: 30min em Curitiba</span>
-            </div>
-            <div class="flex items-center space-x-2">
-              <Icon name="mdi:map-marker-radius" class="text-cyan-300" />
-              <span>Cascavel (entrega em até 2 dias úteis)</span>
+              <span>Entregas de imediato a 2 dias</span>
             </div>
           </div>
           <div class="flex items-center space-x-4">
-            <div class="flex items-center space-x-2">
-              <Icon name="mdi:phone" class="text-cyan-300" />
-              <span>(41) 3011-0777</span>
-            </div>
+                         <div class="flex items-center space-x-2">
+               <Icon name="mdi:phone" class="text-cyan-300" />
+               <a href="https://api.whatsapp.com/send?phone=554130110777&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="hover:text-cyan-200 transition-colors cursor-pointer">(41) 3011-0777</a>
+             </div>
             <div class="flex items-center space-x-2">
               <Icon name="mdi:email" class="text-cyan-300" />
               <span>contato@promaster.eco.br</span>
@@ -195,16 +191,20 @@
                 <Icon name="mdi:email" class="text-[#0194DA]" />
                 <span class="text-gray-400">contato@promaster.eco.br</span>
               </div>
-              <div class="space-y-2">
-                <div class="flex items-center space-x-2">
-                  <Icon name="mdi:phone" class="text-[#0194DA]" />
-                  <span class="text-gray-400">Curitiba: (41) 3011-0777</span>
-                </div>
-                <div class="flex items-center space-x-2">
-                  <Icon name="mdi:phone" class="text-[#0194DA]" />
-                  <span class="text-gray-400">Maringá: (44) 3253-4723</span>
-                </div>
-              </div>
+                             <div class="space-y-2">
+                 <div class="flex items-center space-x-2">
+                   <Icon name="mdi:phone" class="text-[#0194DA]" />
+                   <a href="https://api.whatsapp.com/send?phone=554130110777&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-400 hover:text-[#0194DA] transition-colors cursor-pointer">Curitiba: (41) 3011-0777</a>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <Icon name="mdi:phone" class="text-[#0194DA]" />
+                   <a href="https://api.whatsapp.com/send?phone=554432534723&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-400 hover:text-[#0194DA] transition-colors cursor-pointer">Maringá: (44) 3253-4723</a>
+                 </div>
+                 <div class="flex items-center space-x-2">
+                   <Icon name="mdi:phone" class="text-[#0194DA]" />
+                   <a href="https://api.whatsapp.com/send?phone=5545988289009&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos." target="_blank" class="text-gray-400 hover:text-[#0194DA] transition-colors cursor-pointer">Cascavel: (45) 98828-9009</a>
+                 </div>
+               </div>
               <div class="flex items-start space-x-2">
                 <Icon name="mdi:map-marker" class="text-[#0194DA] mt-1" />
                 <div class="text-gray-400 text-sm">
@@ -226,20 +226,7 @@
       </div>
     </footer>
 
-    <!-- Botão WhatsApp Flutuante -->
-    <a
-      href="https://api.whatsapp.com/send?phone=5541998573333&text=Olá,%20vim%20pelo%20site%20da%20Promaster.%20Gostaria%20de%20mais%20informações%20sobre%20seus%20produtos."
-      target="_blank"
-      class="fixed bottom-20 right-6 w-14 h-14 bg-green-500 text-white rounded-full shadow-xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 group flex items-center justify-center"
-      title="Fale conosco pelo WhatsApp"
-    >
-      <Icon name="mdi:whatsapp" class="text-2xl" />
-      <!-- Tooltip -->
-      <div class="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-3 py-2 rounded-lg text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-        Fale conosco!
-        <div class="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-gray-800"></div>
-      </div>
-    </a>
+
 
     <!-- Botão Voltar ao Topo -->
     <button
