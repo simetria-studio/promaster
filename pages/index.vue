@@ -91,29 +91,49 @@
                 <p class="text-gray-300">Controle de qualidade e precisão</p>
               </div>
 
-              <!-- Simulação de Tubos de Ensaio -->
-              <div class="grid grid-cols-5 gap-4 mb-8">
-                <div class="relative">
-                  <div class="w-full h-32 bg-gradient-to-t from-red-500/80 to-red-300/60 rounded-full border-2 border-white/30 animate-pulse"></div>
-                  <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-white/50 rounded-t"></div>
-                </div>
-                <div class="relative">
-                  <div class="w-full h-28 bg-gradient-to-t from-yellow-500/80 to-yellow-300/60 rounded-full border-2 border-white/30 animate-pulse" style="animation-delay: -0.5s;"></div>
-                  <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-white/50 rounded-t"></div>
-                </div>
-                <div class="relative">
-                  <div class="w-full h-36 bg-gradient-to-t from-[#0194DA]/80 to-cyan-400/60 rounded-full border-2 border-white/30 animate-pulse" style="animation-delay: -1s;"></div>
-                  <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-white/50 rounded-t"></div>
-                </div>
-                <div class="relative">
-                  <div class="w-full h-24 bg-gradient-to-t from-green-500/80 to-green-300/60 rounded-full border-2 border-white/30 animate-pulse" style="animation-delay: -1.5s;"></div>
-                  <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-white/50 rounded-t"></div>
-                </div>
-                <div class="relative">
-                  <div class="w-full h-30 bg-gradient-to-t from-purple-500/80 to-purple-300/60 rounded-full border-2 border-white/30 animate-pulse" style="animation-delay: -2s;"></div>
-                  <div class="absolute -top-2 left-1/2 transform -translate-x-1/2 w-3 h-4 bg-white/50 rounded-t"></div>
-                </div>
-              </div>
+                             <!-- Imagens Reais dos Produtos -->
+               <div class="grid grid-cols-5 gap-4 mb-8">
+                 <div class="relative group cursor-pointer" @click="openModal('/img/img1.jpg', 'Produto 1')">
+                   <div class="absolute -inset-1 bg-gradient-to-r from-red-400 to-red-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                   <NuxtImg 
+                     src="/img/img1.jpg" 
+                     alt="Produto 1" 
+                     class="relative w-full h-32 object-cover rounded-full border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
+                 <div class="relative group cursor-pointer" @click="openModal('/img/img2.jpg', 'Produto 2')">
+                   <div class="absolute -inset-1 bg-gradient-to-r from-yellow-400 to-yellow-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                   <NuxtImg 
+                     src="/img/img2.jpg" 
+                     alt="Produto 2" 
+                     class="relative w-full h-28 object-cover rounded-full border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
+                 <div class="relative group cursor-pointer" @click="openModal('/img/img3.jpg', 'Produto 3')">
+                   <div class="absolute -inset-1 bg-gradient-to-r from-[#0194DA] to-cyan-400 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                   <NuxtImg 
+                     src="/img/img3.jpg" 
+                     alt="Produto 3" 
+                     class="relative w-full h-36 object-cover rounded-full border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
+                 <div class="relative group cursor-pointer" @click="openModal('/img/img4.jpg', 'Produto 4')">
+                   <div class="absolute -inset-1 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                   <NuxtImg 
+                     src="/img/img4.jpg" 
+                     alt="Produto 4" 
+                     class="relative w-full h-24 object-cover rounded-full border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
+                 <div class="relative group cursor-pointer" @click="openModal('/img/img5.jpg', 'Produto 5')">
+                   <div class="absolute -inset-1 bg-gradient-to-r from-purple-400 to-purple-600 rounded-full blur opacity-25 group-hover:opacity-50 transition duration-300"></div>
+                   <NuxtImg 
+                     src="/img/img5.jpg" 
+                     alt="Produto 5" 
+                     class="relative w-full h-30 object-cover rounded-full border-2 border-white/30 group-hover:scale-105 transition-transform duration-300"
+                   />
+                 </div>
+               </div>
 
               <!-- Métricas em Cards -->
               <div class="grid grid-cols-2 gap-4">
@@ -609,22 +629,64 @@
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-</template>
+             </div>
+     </section>
 
-<script setup>
-// Função para scroll suave até seção de produtos
-const scrollToProdutos = () => {
-  const section = document.getElementById('produtos')
-  if (section) {
-    section.scrollIntoView({ 
-      behavior: 'smooth',
-      block: 'start'
-    })
-  }
-}
+     <!-- Modal para Visualização das Imagens -->
+     <div v-if="modalOpen" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" @click="closeModal">
+       <div class="relative max-w-4xl max-h-[90vh] bg-white rounded-2xl shadow-2xl overflow-hidden" @click.stop>
+         <!-- Botão Fechar -->
+         <button @click="closeModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-black/50 text-white rounded-full flex items-center justify-center hover:bg-black/70 transition-colors">
+           <Icon name="mdi:close" class="text-xl" />
+         </button>
+         
+         <!-- Imagem -->
+         <div class="relative">
+           <NuxtImg 
+             :src="modalImage" 
+             :alt="modalTitle"
+             class="w-full h-auto max-h-[90vh] object-contain"
+           />
+         </div>
+       </div>
+     </div>
+   </div>
+ </template>
+
+ <script setup>
+ import { ref } from 'vue'
+
+ // Variáveis do modal
+ const modalOpen = ref(false)
+ const modalImage = ref('')
+ const modalTitle = ref('')
+
+ // Função para abrir o modal
+ const openModal = (imageSrc, title) => {
+   modalImage.value = imageSrc
+   modalTitle.value = title
+   modalOpen.value = true
+   // Bloquear scroll do body
+   document.body.style.overflow = 'hidden'
+ }
+
+ // Função para fechar o modal
+ const closeModal = () => {
+   modalOpen.value = false
+   // Restaurar scroll do body
+   document.body.style.overflow = 'auto'
+ }
+
+ // Função para scroll suave até seção de produtos
+ const scrollToProdutos = () => {
+   const section = document.getElementById('produtos')
+   if (section) {
+     section.scrollIntoView({ 
+       behavior: 'smooth',
+       block: 'start'
+     })
+   }
+ }
 
 // SEO Meta Tags
 useHead({
