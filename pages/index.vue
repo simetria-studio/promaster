@@ -650,32 +650,103 @@
          </div>
        </div>
      </div>
+
+     <!-- Modal de Aviso de Férias -->
+     <div v-if="vacationModalOpen" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4" @click="closeVacationModal">
+       <div class="relative max-w-lg w-full bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in" @click.stop>
+         <!-- Botão Fechar -->
+         <button @click="closeVacationModal" class="absolute top-4 right-4 z-10 w-10 h-10 bg-gray-200 text-gray-700 rounded-full flex items-center justify-center hover:bg-gray-300 transition-colors">
+           <Icon name="mdi:close" class="text-xl" />
+         </button>
+         
+         <!-- Conteúdo do Modal -->
+         <div class="p-8">
+           <!-- Ícone de Aviso -->
+           <div class="flex justify-center mb-6">
+             <div class="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center">
+               <Icon name="mdi:calendar-alert" class="text-4xl text-white" />
+             </div>
+           </div>
+           
+           <!-- Título -->
+           <h2 class="text-3xl font-bold text-gray-900 text-center mb-6">
+             Aviso de Férias
+           </h2>
+           
+           <!-- Mensagem -->
+           <div class="space-y-4 text-center">
+             <p class="text-lg text-gray-700 leading-relaxed">
+               Estaremos em <span class="font-semibold text-[#0194DA]">férias coletivas</span> de 
+               <span class="font-semibold">22/12/2025</span> à <span class="font-semibold">05/01/2026</span>
+             </p>
+             <p class="text-lg text-gray-700 leading-relaxed">
+               Durante esse período, nosso atendimento estará em recesso.
+             </p>
+             <p class="text-xl font-semibold text-[#0194DA] mt-6">
+               Retornaremos no dia <span class="text-gray-900">06/01/2026</span>
+             </p>
+           </div>
+           
+           <!-- Botão de Fechar -->
+           <div class="mt-8 flex justify-center">
+             <button @click="closeVacationModal" class="bg-gradient-to-r from-[#0194DA] to-cyan-500 text-white px-8 py-3 rounded-xl font-semibold text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
+               Entendi
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
    </div>
  </template>
 
- <script setup>
- import { ref } from 'vue'
+<script setup>
+import { ref, onMounted } from 'vue'
 
- // Variáveis do modal
- const modalOpen = ref(false)
- const modalImage = ref('')
- const modalTitle = ref('')
+// Variáveis do modal
+const modalOpen = ref(false)
+const modalImage = ref('')
+const modalTitle = ref('')
 
- // Função para abrir o modal
- const openModal = (imageSrc, title) => {
-   modalImage.value = imageSrc
-   modalTitle.value = title
-   modalOpen.value = true
-   // Bloquear scroll do body
-   document.body.style.overflow = 'hidden'
- }
+// Variáveis do modal de férias
+const vacationModalOpen = ref(false)
 
- // Função para fechar o modal
- const closeModal = () => {
-   modalOpen.value = false
-   // Restaurar scroll do body
-   document.body.style.overflow = 'auto'
- }
+// Função para abrir o modal
+const openModal = (imageSrc, title) => {
+  modalImage.value = imageSrc
+  modalTitle.value = title
+  modalOpen.value = true
+  // Bloquear scroll do body
+  document.body.style.overflow = 'hidden'
+}
+
+// Função para fechar o modal
+const closeModal = () => {
+  modalOpen.value = false
+  // Restaurar scroll do body
+  document.body.style.overflow = 'auto'
+}
+
+// Função para fechar o modal de férias
+const closeVacationModal = () => {
+  vacationModalOpen.value = false
+  // Salvar no localStorage que o usuário já viu o aviso
+  if (typeof window !== 'undefined') {
+    localStorage.setItem('vacationNoticeDismissed', 'true')
+  }
+  // Restaurar scroll do body
+  document.body.style.overflow = 'auto'
+}
+
+// Verificar e mostrar o modal de férias ao montar o componente
+onMounted(() => {
+  if (typeof window !== 'undefined') {
+    const dismissed = localStorage.getItem('vacationNoticeDismissed')
+    if (!dismissed) {
+      vacationModalOpen.value = true
+      document.body.style.overflow = 'hidden'
+    }
+  }
+})
 
  // Função para scroll suave até seção de produtos
  const scrollToProdutos = () => {
@@ -717,5 +788,20 @@ useHead({
 
 .animation-delay-500 {
   animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
 }
 </style> 
