@@ -261,13 +261,14 @@
             >
               <Icon name="mdi:close" class="text-2xl" />
             </button>
-            <NuxtImg
-              src="/modal1.jpg"
+            <!-- img estático: NuxtImg + format webp quebra em muitos hosts (IPX/otimização indisponível) -->
+            <img
+              :src="modal1Src"
               alt="Estamos em novo endereço — Promaster Cascavel"
               class="max-h-[85vh] w-auto max-w-full rounded-xl object-contain shadow-2xl"
-              sizes="440px"
               loading="eager"
-              format="webp"
+              decoding="async"
+              fetchpriority="high"
             />
           </div>
         </div>
@@ -278,8 +279,11 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { joinURL } from 'ufo'
 
 const ADDRESS_MODAL_STORAGE_KEY = 'promaster_modal_novo_endereco_v1'
+
+const modal1Src = joinURL(useRuntimeConfig().app.baseURL, '/modal1.jpg')
 
 const mobileMenuOpen = ref(false)
 const showScrollTop = ref(false)
