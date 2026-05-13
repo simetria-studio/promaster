@@ -236,14 +236,72 @@
     >
       <Icon name="mdi:arrow-up" class="text-xl" />
     </button>
+
+    <!-- Popup: novo endereço Cascavel -->
+    <Teleport to="body">
+      <Transition name="fade-modal">
+        <div
+          v-if="addressModalOpen"
+          class="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="address-modal-title"
+        >
+          <div
+            class="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            @click="closeAddressModal"
+          />
+          <div class="relative z-10 w-full max-w-[min(92vw,440px)] max-h-[90vh] flex flex-col items-center">
+            <span id="address-modal-title" class="sr-only">Promaster Cascavel — novo endereço</span>
+            <button
+              type="button"
+              class="absolute -top-2 -right-2 sm:top-0 sm:right-0 z-20 flex h-10 w-10 items-center justify-center rounded-full bg-white text-gray-800 shadow-lg ring-1 ring-black/10 transition hover:bg-gray-100"
+              aria-label="Fechar"
+              @click="closeAddressModal"
+            >
+              <Icon name="mdi:close" class="text-2xl" />
+            </button>
+            <NuxtImg
+              src="/modal1.jpg"
+              alt="Estamos em novo endereço — Promaster Cascavel"
+              class="max-h-[85vh] w-auto max-w-full rounded-xl object-contain shadow-2xl"
+              sizes="440px"
+              loading="eager"
+              format="webp"
+            />
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+
+const ADDRESS_MODAL_STORAGE_KEY = 'promaster_modal_novo_endereco_v1'
 
 const mobileMenuOpen = ref(false)
 const showScrollTop = ref(false)
+const addressModalOpen = ref(false)
+
+const closeAddressModal = () => {
+  addressModalOpen.value = false
+  if (process.client) {
+    try {
+      sessionStorage.setItem(ADDRESS_MODAL_STORAGE_KEY, '1')
+    } catch {
+      /* ignore */
+    }
+    document.body.style.overflow = ''
+  }
+}
+
+const onEscapeAddressModal = (e) => {
+  if (e.key === 'Escape' && addressModalOpen.value) {
+    closeAddressModal()
+  }
+}
 
 // Função para scroll suave até seção de produtos
 const scrollToProdutos = () => {
@@ -273,8 +331,31 @@ const scrollToTop = () => {
   })
 }
 
+watch(addressModalOpen, (open) => {
+  if (!process.client) return
+  if (open) {
+    document.addEventListener('keydown', onEscapeAddressModal)
+    document.body.style.overflow = 'hidden'
+  } else {
+    document.removeEventListener('keydown', onEscapeAddressModal)
+    document.body.style.overflow = ''
+  }
+})
+
 onMounted(() => {
   window.addEventListener('scroll', handleScroll)
+
+  if (process.client) {
+    let dismissed = false
+    try {
+      dismissed = sessionStorage.getItem(ADDRESS_MODAL_STORAGE_KEY) === '1'
+    } catch {
+      dismissed = false
+    }
+    if (!dismissed) {
+      addressModalOpen.value = true
+    }
+  }
   
   // Verificar se há hash na URL e fazer scroll
   if (window.location.hash === '#produtos') {
@@ -292,6 +373,10 @@ onMounted(() => {
 
 onUnmounted(() => {
   window.removeEventListener('scroll', handleScroll)
+  document.removeEventListener('keydown', onEscapeAddressModal)
+  if (process.client) {
+    document.body.style.overflow = ''
+  }
 })
 
 // Fechar menu mobile ao redimensionar tela
@@ -302,4 +387,24 @@ if (process.client) {
     }
   })
 }
-</script> 
+</script>
+
+<style scoped>
+.fade-modal-enter-active,
+.fade-modal-leave-active {
+  transition: opacity 0.22s ease;
+}
+.fade-modal-enter-active .relative.z-10,
+.fade-modal-leave-active .relative.z-10 {
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+.fade-modal-enter-from,
+.fade-modal-leave-to {
+  opacity: 0;
+}
+.fade-modal-enter-from .relative.z-10,
+.fade-modal-leave-to .relative.z-10 {
+  transform: scale(0.96);
+  opacity: 0;
+}
+</style>

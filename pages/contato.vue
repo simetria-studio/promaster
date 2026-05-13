@@ -256,9 +256,10 @@
                     <div>
                       <h4 class="font-semibold text-gray-900 mb-1">Endereço</h4>
                       <p class="text-gray-600">
-                        Av. Aracy Tanaka Biazetto, 9930<br>
-                        BRCAO 04 - Parque São Paulo<br>
-                        Cascavel - PR, 85803-971
+                        R. São Francisco de Assis, 995 - FUNDOS<br>
+                        Pioneiros Catarinenses<br>
+                        Cascavel - PR<br>
+                        CEP 85.805-620
                       </p>
                     </div>
                   </div>
