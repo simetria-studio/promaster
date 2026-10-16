@@ -180,11 +180,11 @@
          <div class="max-w-4xl mx-auto">
            <div class="inline-flex items-center bg-white/20 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8">
              <Icon name="mdi:calendar-star" class="mr-2" />
-             Celebrando 7 Anos
+             Celebrando 8 Anos
            </div>
            
            <h2 class="text-5xl md:text-6xl font-bold text-white mb-8 font-poppins">
-             <span class="text-gradient-white">7 Anos</span> de Dedicação
+             <span class="text-gradient-white">8 Anos</span> de Dedicação
            </h2>
            
            <p class="text-xl md:text-2xl text-white/90 mb-12 leading-relaxed">
@@ -193,7 +193,7 @@
            
            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
              <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
-               <div class="text-4xl font-bold text-white mb-2">7</div>
+               <div class="text-4xl font-bold text-white mb-2">8</div>
                <div class="text-white/90 font-semibold">Anos de Experiência</div>
              </div>
              <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20">
