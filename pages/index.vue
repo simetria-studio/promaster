@@ -257,7 +257,7 @@
               <h3 class="text-3xl font-bold text-gray-900 mb-6">Crescimento e Expansão</h3>
                              <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                  <span class="text-[#0194DA] font-semibold">Clientes viraram amigos, amigos viraram parceiros</span> 
-                 e a Promaster continua crescendo a cada dia, completando 7 anos neste mercado.
+                 e a Promaster continua crescendo a cada dia, completando 8 anos neste mercado.
                </p>
               <p class="text-lg text-gray-600 mb-6 leading-relaxed">
                 Hoje, trabalhamos em dois barracões de mais de 500m², temos um 
